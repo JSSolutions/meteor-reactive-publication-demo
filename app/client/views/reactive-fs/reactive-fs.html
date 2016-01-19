@@ -1,0 +1,17 @@
+<template name="ReactiveFS">
+  {{# if Template.subscriptionsReady}}
+    {{# each reactiveFS}}
+      <p>
+        {{# if isDirectory}}
+          <i class="fa fa-folder"></i>
+        {{else}}
+          <i class="fa fa-file"></i>
+        {{/ if}}
+        {{name}}
+        ({{size}} bytes)
+      </p>
+    {{/ each}}
+  {{else}}
+    Loading...
+  {{/ if}}
+</template>
